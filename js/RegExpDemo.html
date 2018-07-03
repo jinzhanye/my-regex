@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+{
+    console.log('test1**************');
+    const pattern1 = /\[bc\]at/i;
+    console.log(pattern1.global);
+    console.log(pattern1.ignoreCase);
+    console.log(pattern1.multiline);
+    console.log(pattern1.source);
+
+    const pattern2 = new RegExp("\\[bc\\]at/", 'i');
+    console.log(pattern2.global);
+    console.log(pattern2.ignoreCase);
+    console.log(pattern2.multiline);
+    console.log(pattern2.source);
+}
+{
+    console.log('exec example1:************');
+    const text = 'mon and dad and baby';
+    const pattern = /mon( and dad( and baby)?)?/;
+
+    const matches = pattern.exec(text);
+    console.log(matches);
+    console.log(matches.index);
+    console.log(matches.input);// mon and dad and baby
+    console.log(matches[0]);// mon and dad and baby
+    console.log(matches[1]);// and dad and baby
+    console.log(matches[2]);// and baby
+}
+{
+    console.log('exec example2:************');
+    const text = 'cat, bat, sat, fat';
+    const pattern1 = /.at/;
+    let matches1 = pattern1.exec(text);
+    console.log('pattern1 1');
+    console.log(matches1.index);// 0
+    console.log(matches1[0]);// cat
+    console.log(pattern1.lastIndex);// 0
+
+    console.log('pattern1 2');
+    matches1 = pattern1.exec(text);
+    console.log(matches1.index);// 0
+    console.log(matches1[0]);// cat
+    console.log(pattern1.lastIndex);// 0
+
+    const pattern2 = /.at/g; // 与pattern1相比多了g
+    let matches2 = pattern2.exec(text);
+    console.log('pattern2 1');
+    console.log(matches2.index);// 0
+    console.log(matches2[0]);// cat
+    console.log(pattern2.lastIndex);// 3，lastIndex 移动，下次从index为3的位置开始匹配
+
+    console.log('pattern2 2');
+    matches2 = pattern2.exec(text);
+    console.log(matches2.index);// 5
+    console.log(matches2[0]);// cat
+    console.log(pattern2.lastIndex);// 8，lastIndex 移动
+}
+{
+    // RegExp有$1~$9，9个静态属性，当调用exec或test方法时，这些属性会被自动填充
+    console.log('RegExp$1~$9 example:************');
+    const text = 'this has been a short summer';
+    const pattern = /(..)mm(.)/g;
+    if(pattern.test(text)){
+        console.log(RegExp.$1);// su
+        console.log(RegExp.$2);// e
+    }
+}
+{
+    console.log('ES2018新特性，命名捕获:************');
+    const pattern =/(?<year>\d{4})-(?<month>\d{2})-(?<day>\d{2})/u;
+    const result = pattern.exec('2017-07-10');
+    console.log(result.groups);
+    // result.groups.year === '2017'
+    // result.groups.month === '07'
+    // result.groups.day === '10'
+}
+</script>
+</body>
+</html>
