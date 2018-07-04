@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+const path = '/Users/jinzhan/Desktop/aws.png';
+console.log('去掉文件名开头的路径：', path.replace(/^.*\//, ''));
+console.log('从路径中获取文件名：', path.match(/[^/]*$/)[0]);
+let match1 = path.match(/^(.*)\/([^/]*)$/);
+console.log('所在路径：', match1[1], ' 文件名：', match1[2]);
+
+const numPattern = /-?(\d+(\.\d*)?|\.\d+)/;
+const numArr = [
+    '-1.42',
+    '-0.41',
+    '-.422',
+    '-123',
+    '1.4',
+    '0.4',
+    '.4',
+    '123',
+    'bbq'
+];
+console.log('num test:***********');
+numArr.forEach(num => {
+    console.log(`${num}, ${numPattern.test(num)}`);
+});
+</script>
+</body>
+</html>

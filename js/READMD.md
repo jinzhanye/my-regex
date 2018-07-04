@@ -5,10 +5,12 @@
 - exec
 
 
-以下两种写法是等价的，都是返回一个match对象
-
 pattern.exec(text)
-text.match(pattern)
+当 exec() 再也找不到匹配的文本时，它将返回 null，并把 lastIndex 属性重置为 0
+那当要获取全局匹配的全部匹配项时，可以通过循环来获取：
+
+
+- text.match(pattern) 返回匹配字符串数组
 
 ### String
 - search

@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="276ba4e3-2891-42b5-a5c2-241984e15a1e" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/READM.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/Demo.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/ExecContent.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/READMD.md" beforeDir="false" afterPath="$PROJECT_DIR$/js/READMD.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/RegExpDemo.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/RegExpDemo.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,12 +21,42 @@
     <favorites_list name="my-regex" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
+    <leaf>
+      <file leaf-file-name="Demo.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/Demo.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="26">
-              <caret line="1" column="5" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
+            <state relative-caret-position="635">
+              <caret line="29" column="3" lean-forward="true" selection-start-line="29" selection-start-column="3" selection-end-line="29" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ExecContent.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js/ExecContent.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="611">
+              <caret line="56" column="20" selection-start-line="56" selection-start-column="20" selection-end-line="56" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="READMD.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/READMD.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="208">
+                <caret line="8" column="51" lean-forward="true" selection-start-line="8" selection-end-line="8" selection-end-column="51" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RegExpDemo.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/RegExpDemo.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-795">
+              <caret line="32" column="47" lean-forward="true" selection-start-line="32" selection-start-column="47" selection-end-line="32" selection-end-column="47" />
             </state>
           </provider>
         </entry>
@@ -41,8 +75,9 @@
     <findStrings>
       <find>matches2.lastIndex</find>
       <find>matches1.lastIndex</find>
-      <find>exec</find>
       <find>\w</find>
+      <find>exec</find>
+      <find>match</find>
     </findStrings>
     <replaceStrings>
       <replace>pattern2.lastIndex</replace>
@@ -56,12 +91,14 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/TwoWord.java" />
-        <option value="$PROJECT_DIR$/js/Demo.html" />
         <option value="$PROJECT_DIR$/js/StringDemo.js" />
         <option value="$PROJECT_DIR$/js/StringDemo.html" />
-        <option value="$PROJECT_DIR$/js/RegExpDemo.html" />
-        <option value="$PROJECT_DIR$/js/READMD.md" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/js/RegExpDemo.html" />
+        <option value="$PROJECT_DIR$/READM.md" />
+        <option value="$PROJECT_DIR$/js/Demo.html" />
+        <option value="$PROJECT_DIR$/js/READMD.md" />
+        <option value="$PROJECT_DIR$/js/ExecContent.html" />
       </list>
     </option>
   </component>
@@ -81,9 +118,9 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="787" />
+    <option name="x" value="524" />
     <option name="y" value="23" />
-    <option name="width" value="1133" />
+    <option name="width" value="1396" />
     <option name="height" value="1057" />
   </component>
   <component name="ProjectLevelVcsManager">
@@ -94,7 +131,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -111,6 +147,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="AndroidView" />
       <pane id="PackagesPane" />
     </panes>
@@ -135,7 +172,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Unknown.Main517781317">
+  <component name="RunManager" selected="Unknown.Main1206319486">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="my-regex" />
@@ -160,7 +197,8 @@
       <updated>1530358436685</updated>
       <workItem from="1530358438025" duration="712000" />
       <workItem from="1530620752095" duration="4118000" />
-      <workItem from="1530625175670" duration="175000" />
+      <workItem from="1530625175670" duration="683000" />
+      <workItem from="1530705729520" duration="7465000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1530625343014</created>
@@ -169,31 +207,38 @@
       <option name="project" value="LOCAL" />
       <updated>1530625343014</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="init">
+      <created>1530625406846</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1530625406846</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5005000" />
+    <option name="totallyTimeSpent" value="12978000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="787" y="23" width="1133" height="1057" extended-state="0" />
+    <frame x="524" y="23" width="1396" height="1057" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49895832" visible="true" weight="0.118705034" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49895832" weight="0.17146432" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32987553" />
       <window_info anchor="bottom" id="Statistic" order="10" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50089926" side_tool="true" weight="0.46770832" />
+      <window_info anchor="bottom" id="Version Control" order="12" sideWeight="0.48676956" weight="0.55104166" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Version Control" order="12" sideWeight="0.48676956" weight="0.55186725" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="14" sideWeight="0.49910071" visible="true" weight="0.46770832" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4889989" weight="0.41683993" />
+      <window_info anchor="bottom" id="Terminal" order="14" sideWeight="0.49910071" weight="0.46770832" />
       <window_info id="Favorites" order="7" sideWeight="0.50104165" side_tool="true" weight="0.21913327" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4889989" weight="0.41683993" />
       <window_info anchor="bottom" id="FindBugs-IDEA" order="7" weight="0.32987553" />
       <window_info id="Designer" order="3" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.2627551" />
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info id="JRebel" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Spring" order="13" />
       <window_info id="Image Layers" order="5" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -201,16 +246,16 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.24917492" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="UI Designer" order="4" />
+      <window_info id="JRebel" order="6" side_tool="true" />
       <window_info anchor="right" id="Capture Analysis" order="7" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="5" />
       <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
       <window_info anchor="right" id="Maven Projects" order="4" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="JRebel Executor" order="10" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="JRebel Console" order="9" sideWeight="0.51102537" side_tool="true" weight="0.25622407" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.2627551" />
+      <window_info anchor="right" id="Database" order="5" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info anchor="right" id="Theme Preview" order="9" />
@@ -219,6 +264,32 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -261,30 +332,54 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/StringDemo.js" />
     <entry file="file://$PROJECT_DIR$/js/StringDemo.html" />
-    <entry file="file://$PROJECT_DIR$/js/RegExpDemo.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="635">
-          <caret line="75" column="23" selection-start-line="75" selection-start-column="23" selection-end-line="75" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/my-regex.iml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/READMD.md">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="52">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/READM.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="130">
-            <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="156">
+            <caret line="6" column="4" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/js/Demo.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="26">
-          <caret line="1" column="5" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
+        <state relative-caret-position="635">
+          <caret line="29" column="3" lean-forward="true" selection-start-line="29" selection-start-column="3" selection-end-line="29" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/RegExpDemo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-795">
+          <caret line="32" column="47" lean-forward="true" selection-start-line="32" selection-start-column="47" selection-end-line="32" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/READMD.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="208">
+            <caret line="8" column="51" lean-forward="true" selection-start-line="8" selection-end-line="8" selection-end-column="51" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/ExecContent.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="611">
+          <caret line="56" column="20" selection-start-line="56" selection-start-column="20" selection-end-line="56" selection-end-column="20" />
         </state>
       </provider>
     </entry>

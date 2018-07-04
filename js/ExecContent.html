@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>提取分隔符之内的文本</title>
+</head>
+<body>
+<script>
+// 以下例子提取 @{xxx} 内的内容，假设@{}内不为空
+{
+    console.log('不支持转义版***************');
+    const text = 'Today is nice @{I am a hello world} good @{bbq}';
+    const pattern = /@{([^}]+)}/g;
+    let matches = '';
+    // 注意表达式与语句的区别
+    // 赋值表达式返回的是右侧的值，而var语句返回undefined
+    // 当 exec() 再也找不到匹配的文本时，它将返回 null，并把 lastIndex 属性重置为 0
+    while ((matches = pattern.exec(text)) !== null) {
+        console.log(matches[1]);
+    }
+    // I am a hello world
+    // bbq
+}
+{
+    console.log('支持转义版，但有BUG版***************');
+    const text = 'Today is nice @{I am a hello \\}world} good @{bbq}';
+    const text2 = 'Today is nice @{I am a hello \\}';
+    const pattern = /@{((\\.|[^}])+)}/g;
+    let matches = '';
+    // 注意表达式与语句的区别
+    // 赋值表达式返回的是右侧的值，而var语句返回undefined
+    // 当 exec() 再也找不到匹配的文本时，它将返回 null，并把 lastIndex 属性重置为 0
+    while ((matches = pattern.exec(text)) !== null) {
+        console.log(matches[1]);
+    }
+    // I am a hello \}world
+    // bbq
+
+    // BUG : text2最后的 } 是一个转义的 } ，应该匹配失败才对，但是匹配成功了
+    console.log('bug**');
+    while ((matches = pattern.exec(text2)) !== null) {
+        console.log(matches[1]);
+    }
+}
+{
+    console.log('完美版***************');
+    const text = 'Today is nice @{I am a hello \\}world} good @{bbq}';
+    const text2 = 'Today is nice @{I am a hello \\}';
+    const pattern = /@{((\\.|[^\\}])+)}/g;
+    let matches = '';
+    while ((matches = pattern.exec(text)) !== null) {
+        console.log(matches[1]);
+    }
+    // I am a hello \}world
+    // bbq
+
+    // 匹配失败，不会输出任何东西
+    while ((matches = pattern.exec(text2)) !== null) {
+        console.log(matches[1]);
+    }
+}
+</script>
+</body>
+</html>

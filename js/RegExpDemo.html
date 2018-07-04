@@ -73,13 +73,18 @@
     }
 }
 {
-    console.log('ES2018新特性，命名捕获:************');
+    console.log('ES2018新特性:************');
+    console.log('命名捕获:');
     const pattern =/(?<year>\d{4})-(?<month>\d{2})-(?<day>\d{2})/u;
     const result = pattern.exec('2017-07-10');
     console.log(result.groups);
     // result.groups.year === '2017'
     // result.groups.month === '07'
     // result.groups.day === '10'
+    console.log('lookbehind:');
+    const RE_DOLLAR_PREFIX = /(?<=\$)foo/g;
+    // 只有当foo左侧为$时foo才会被替换 '$bar %foo foo'
+    console.log('$foo %foo foo'.replace(RE_DOLLAR_PREFIX, 'bar'));
 }
 </script>
 </body>
