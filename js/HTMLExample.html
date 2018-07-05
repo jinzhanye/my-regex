@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTMLExample</title>
+</head>
+<body>
+<script>
+{
+    console.log('匹配HTML tag ****************');
+    const textArr = ['<title a="2" dd="2222">', '<img src="http://xxx" alt="">'];
+    const pattern = /<(("[^"]*"|'[^']*'|[^'">])*)>/;
+    textArr.forEach(text => {
+        const match = pattern.exec(text);
+        console.log(match[1]);
+    });
+}
+</script>
+</body>
+</html>
