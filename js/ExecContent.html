@@ -6,11 +6,11 @@
 </head>
 <body>
 <script>
-// 以下例子提取 @{xxx} 内的内容，假设@{}内不为空
+// 以下例子提取 @{xxx} 内的内容
 {
     console.log('不支持转义版***************');
     const text = 'Today is nice @{I am a hello world} good @{bbq}';
-    const pattern = /@{([^}]+)}/g;
+    const pattern = /@{([^}]*)}/g;
     let matches = '';
     // 注意表达式与语句的区别
     // 赋值表达式返回的是右侧的值，而var语句返回undefined
@@ -22,14 +22,29 @@
     // bbq
 }
 {
+    console.log('使用环视支持转义，但有BUG，斜线转义斜线无效 ***************');
+    const text = 'Today is nice @{I am a hello \\}world} good @{bbq}';// 由于字符串转义，\\ 表示 \
+    const text2 = 'Today is nice @{I am a hello \\\\} or }';// \ 对自身转义
+    const pattern = /@{(([^}]|(?<=\\)})*)}/g;
+    let matches = '';
+    while ((matches = pattern.exec(text)) !== null) {
+        console.log(matches[1]);
+    }
+    // I am a hello \}world
+    // bbq
+
+    // BUG : text2 应该捕获的是 I am a hello \  ， 但却捕获了 I am a hello \\} or
+    console.log('bug**');
+    while ((matches = pattern.exec(text2)) !== null) {
+        console.log(matches[1]);
+    }
+}
+{
     console.log('支持转义版，但有BUG版***************');
     const text = 'Today is nice @{I am a hello \\}world} good @{bbq}';
     const text2 = 'Today is nice @{I am a hello \\}';
-    const pattern = /@{((\\.|[^}])+)}/g;
+    const pattern = /@{((\\.|[^}])*)}/g;
     let matches = '';
-    // 注意表达式与语句的区别
-    // 赋值表达式返回的是右侧的值，而var语句返回undefined
-    // 当 exec() 再也找不到匹配的文本时，它将返回 null，并把 lastIndex 属性重置为 0
     while ((matches = pattern.exec(text)) !== null) {
         console.log(matches[1]);
     }
@@ -46,7 +61,7 @@
     console.log('完美版***************');
     const text = 'Today is nice @{I am a hello \\}world} good @{bbq}';
     const text2 = 'Today is nice @{I am a hello \\}';
-    const pattern = /@{((\\.|[^\\}])+)}/g;
+    const pattern = /@{((\\.|[^\\}])*)}/g;
     let matches = '';
     while ((matches = pattern.exec(text)) !== null) {
         console.log(matches[1]);
