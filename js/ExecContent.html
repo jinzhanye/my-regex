@@ -74,6 +74,25 @@
         console.log(matches[1]);
     }
 }
+
+// 更多例子
+{
+  console.log('支持内容换行***************');
+  const text = '<config>\n' +
+    '  {\n' +
+    '    pages: [\n' +
+    '      \'pages/home/index.mina\',\n' +
+    '      \'pages/forum/index.mina\',\n' +
+    '      \'pages/my/index.mina\',\n' +
+    '    ],\n' +
+    '  }\n' +
+    '</config>'
+
+  // const config = /<config>([\s\S]*)?<\/config>/.exec(text)[1]
+  const config = /<config>([^<]*)<\/config>/g.exec(text)[1]
+
+  console.log(config)
+}
 </script>
 </body>
 </html>
